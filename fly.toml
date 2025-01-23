@@ -1,0 +1,17 @@
+app = "your-app-name"
+
+[build]
+  builder = "paketobuildpacks/builder:full"
+  buildpacks = ["paketo-buildpacks/python"]
+
+[env]
+  PYTHON_VERSION = "3.12"
+  PORT = "8080"
+
+[[services]]
+  internal_port = 8080
+  protocol = "tcp"
+
+  [[services.ports]]
+    handlers = ["http"]
+    port = 80
