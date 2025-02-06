@@ -5,3 +5,7 @@ numpy
 jinja2
 python-multipart
 psutil
+matplotlib
+numba
+tracemalloc
+os
